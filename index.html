@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貪食蛇 Snake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <h1>貪食蛇</h1>
+      <div class="score-panel">
+        <span>分數：<strong id="score">0</strong></span>
+        <span>最佳：<strong id="best">0</strong></span>
+      </div>
+    </header>
+
+    <main class="game-wrapper">
+      <canvas id="board" width="480" height="480" aria-label="Snake game board" role="img"></canvas>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-content" id="overlay-content"></div>
+        <div class="overlay-actions">
+          <button id="btn-start" class="btn primary">開始</button>
+          <button id="btn-restart" class="btn">重新開始</button>
+          <button id="btn-resume" class="btn">繼續</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="controls">
+      <div class="hint">鍵盤方向鍵移動，P 暫停/繼續，R 重新開始</div>
+      <div class="touch-dpad" id="touch-dpad" aria-hidden="true">
+        <button data-dir="up" class="pad up" aria-label="向上"></button>
+        <div class="middle">
+          <button data-dir="left" class="pad left" aria-label="向左"></button>
+          <button data-dir="right" class="pad right" aria-label="向右"></button>
+        </div>
+        <button data-dir="down" class="pad down" aria-label="向下"></button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+<noscript>需要啟用 JavaScript 才能遊玩。</noscript>
+</html>
+
+
